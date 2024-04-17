@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: bisque;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.add-book {
+    height: 40px;
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 4%;
+    background-color: #fff;
+}
+
+.enter-info {
+    background-color: #999;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+}
+
+.name-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#book-name {
+    width: 150px;
+}
