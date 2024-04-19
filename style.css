@@ -3,37 +3,83 @@
 }
 
 body {
+    background-color: #ffddc0;
     margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    position: relative;
 }
 
 .header {
-    background-color: bisque;
+    background-color: #e6b58d;
     height: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.add-book {
+.new-book {
+    color: #37286a;
     height: 40px;
     width: 100px;
     margin-right: 50px;
     border-radius: 4%;
-    background-color: #fff;
+    background-color: #c9c4dc;
+}
+
+.form-container {
+    z-index: 10;
+    position: fixed;
+    width: 200px;
+    margin: auto;
+    top: 100px;
+    left: calc(50% - 100px);
+}
+
+.hidden {
+    display: none;
+}
+
+.wow {
+    background-color: #000;
+    width: 1300px;
+    height: 1000px;
 }
 
 .enter-info {
     background-color: #999;
-    width: 400px;
-    height: 500px;
+    width: 200px;
+    height: 300px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.name-section {
+.section-pair {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section {
     display: flex;
     flex-direction: column;
 }
 
-#book-name {
+.field {
     width: 150px;
+}
+
+.books {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.book {
+    background-color: #c9c4dc;
+    width: 200px;
+    height: 300px;
+    margin: 50px 100px;
+    display: flex;
 }

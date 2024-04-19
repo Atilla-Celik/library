@@ -9,15 +9,35 @@
     </head>
     <body>
         <div class="header">
-            <button class="add-book">Add Book</button>
+            <button class="new-book">New Book</button>
         </div>
+        <!-- <div class="wow"></div> -->
+        <div class="form-container hidden">
+            <div class="enter-info">
+                <div class="section">
+                    <label for="book-title">Book Title</label>
+                    <input type="text" class="field" id="book-title" />
+                </div>
+                <div class="section">
+                    <label for="author">Author</label>
+                    <input type="text" class="field" id="author" />
+                </div>
 
-        <div class="enter-info">
-            <div class="name-section">
-                <label for="book-name">Name of the book</label>
-                <input type="text" id="book-name" />
+                <div class="section">
+                    <label for="pages">Number of Pages</label>
+                    <input type="text" class="field" id="pages" />
+                </div>
+                <div class="section">
+                    <label for="read">Have you read it?</label>
+                    <input type="checkbox" class="field" id="read" />
+                </div>
+                <div class="add-cancel">
+                    <button class="add-book">Add Book</button>
+                    <button class="cancel">Cancel</button>
+                </div>
             </div>
         </div>
+        <div class="books"></div>
 
         <script src="script.js"></script>
     </body>
