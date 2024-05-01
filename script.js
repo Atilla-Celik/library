@@ -38,9 +38,15 @@ cancel.addEventListener("click", () => {
 //Adds the book to the library and displays it
 //************************************* */
 addBook.addEventListener("click", () => {
-    let info = [bookTitle.value, author.value, pages.value, read.value];
+    let info = [bookTitle.value, author.value, pages.value];
+    if (read.checked) {
+        info.push(true);
+    } else {
+        info.push(false);
+    }
     let book = new Book(...info);
     library.push(book);
+    console.log(book.read);
 
     // bookCont = document.createElement("div");
     // bookCont.classList.add("book-cont");
@@ -106,6 +112,8 @@ const displayLibrary = function () {
         deleteBtn.classList.add("delete-btn");
         deleteBtn.addEventListener("click", () => {
             bookCont.remove();
+            library.splice(library.indexOf(book), 1);
+            console.log(library);
         });
 
         // deleteBtn.addEventListener("click", () => {
@@ -124,12 +132,41 @@ const displayLibrary = function () {
         bookInfo.innerText = `Title: ${book.title}\n\nAuthor: ${book.author}\n\nPages: ${book.pages}`;
         bookCont.appendChild(bookInfo);
         books.appendChild(bookCont);
-        bookCont.dataset.number = library.length;
+        // bookCont.dataset.number = library.length;
+
+        let statusCont = document.createElement("div");
+        statusCont.classList.add("status-cont");
+
+        let statusText = document.createElement("span");
+        statusText.innerText = "Status: ";
+        statusCont.appendChild(statusText);
+
+        let statusBtn = document.createElement("button");
+        book.read
+            ? statusBtn.classList.toggle("read")
+            : statusBtn.classList.toggle("not-read");
+        book.read
+            ? (statusBtn.innerText = "Read")
+            : (statusBtn.innerText = "Not Read");
+
+        statusBtn.addEventListener("click", () => {
+            statusBtn.classList.toggle("read");
+            statusBtn.classList.toggle("not-read");
+            if (statusBtn.classList.contains("read")) {
+                statusBtn.innerText = "Read";
+            } else {
+                statusBtn.innerText = "Not Read";
+            }
+        });
+
+        statusCont.appendChild(statusBtn);
+
+        bookCont.appendChild(statusCont);
 
         bookTitle.value = "";
         author.value = "";
         pages.value = "";
-        read.value = "";
+        read.checked = false;
         console.log(bookCont.dataset.bookNumber);
     });
 };

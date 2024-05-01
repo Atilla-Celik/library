@@ -86,7 +86,7 @@ body {
     margin: 50px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
@@ -118,4 +118,16 @@ body {
 
 .delete-btn:active {
     transform: scale(0.8);
+}
+
+.status-cont {
+    margin-top: 30px;
+}
+
+.read {
+    background-color: rgb(144, 238, 144);
+}
+
+.not-read {
+    background-color: rgb(247, 104, 104);
 }
