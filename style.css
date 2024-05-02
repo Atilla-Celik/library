@@ -80,7 +80,7 @@ body {
 }
 
 .book-cont {
-    background-color: #f3f2f7;
+    background-color: #fefefe;
     width: 200px;
     height: 300px;
     margin: 50px 100px;
@@ -90,6 +90,7 @@ body {
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     position: relative;
+    border: solid;
 }
 
 .book {
@@ -107,7 +108,7 @@ body {
 }
 
 .delete-btn {
-    background-color: #f3f2f7;
+    background-color: #fefefe;
     width: 30px;
     height: 30px;
     display: flex;
